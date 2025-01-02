@@ -1,5 +1,6 @@
 package com.example.crudmapaches.ui
 
+import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -50,8 +51,11 @@ class MapacheViewModel(private val mapacheRepositorio: MapacheRepositorio): View
                 val listaMapaches = mapacheRepositorio.obtenerMapaches()
                 MapacheUIState.ObtenerExito(listaMapaches)
             }catch (e: IOException){
+                Log.e("obtenerMapaches", "Error de red o de E/S: ${e.message}", e)
                 MapacheUIState.Error
+
             } catch (e: HttpException){
+                Log.e("obtenerMapaches", "Error HTTP: Código ${e.code()}, mensaje: ${e.message()}", e)
                 MapacheUIState.Error
             }
         }
