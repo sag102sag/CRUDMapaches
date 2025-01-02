@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CRUDMapaches</string>
+    <string name="inicio">Inicio</string>
+    <string name="insertar_mapuche">Insertar Mapuche</string>
+    <string name="actualizar_mapuche">Actualizar Mapuche</string>
+    <string name="atr_s">Atrás</string>
+</resources>
