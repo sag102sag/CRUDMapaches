@@ -8,11 +8,11 @@ data class Mapache(
     @SerialName(value = "id")
     val id: String = "",
     @SerialName(value = "nombre")
-    val nombre: String,
+    val nombre: String="",
     @SerialName(value = "edad")
-    val edad: String,
+    val edad: String="",
     @SerialName(value = "jugueteFavorito")
-    val jugueteFavorito: String,
+    val jugueteFavorito: String="",
     @SerialName(value = "comidasFavoritas")
-    val comidasFavoritas: List<String>
+    val comidasFavoritas: List<String> = listOf()
 )

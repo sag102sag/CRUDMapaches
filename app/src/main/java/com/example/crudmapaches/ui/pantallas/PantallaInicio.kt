@@ -14,6 +14,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -58,11 +59,14 @@ fun PantallaCargando(modifier: Modifier = Modifier) {
 
 @Composable
 fun PantallaError(modifier: Modifier = Modifier) {
+    Column(modifier=Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
+    Text("Error :(")
     Image(
         modifier = modifier.size(200.dp),
         painter = painterResource(R.drawable.error),
         contentDescription = "Error"
     )
+    }
 }
 
 @OptIn(ExperimentalFoundationApi::class)

@@ -1,5 +1,6 @@
 package com.example.crudmapaches.ui
 
+import PantallaInsertar
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -26,6 +27,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.crudmapaches.R
+import com.example.crudmapaches.ui.pantallas.PantallaActualizar
 import com.example.crudmapaches.ui.pantallas.PantallaInicio
 
 
@@ -88,7 +90,7 @@ fun MapacheApp(
                         .fillMaxSize()
                 )
             }
-            /*
+
             composable(route = Pantallas.Insertar.name) {
                 PantallaInsertar(
                     onInsertarPulsado = {
@@ -101,15 +103,15 @@ fun MapacheApp(
             }
             composable(route = Pantallas.Actualizar.name) {
                 PantallaActualizar(
-                    trabajador = viewModel.mapachePulsado,
-                    onTrabajadorActualizado = {
+                    mapache = viewModel.mapachePulsado,
+                    onMapacheActualizado = {
                         viewModel.actualizarMapache(it.id, it)
                         navController.popBackStack(Pantallas.Inicio.name, inclusive = false)
                     },
                     modifier = Modifier
                         .fillMaxSize()
                 )
-            }*/
+            }
         }
     }
 }
