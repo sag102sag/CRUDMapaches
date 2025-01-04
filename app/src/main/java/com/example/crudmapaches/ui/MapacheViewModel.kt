@@ -32,7 +32,7 @@ class MapacheViewModel(private val mapacheRepositorio: MapacheRepositorio): View
     var mapacheUIState: MapacheUIState by mutableStateOf(MapacheUIState.Cargando)
         private set
 
-    var mapachePulsado: Mapache by mutableStateOf(Mapache("","","","", listOf()))
+    var mapachePulsado: Mapache by mutableStateOf(Mapache("","","","", listOf(), 0))
         private set
 
     fun actualizarMapachePulsado(mapache: Mapache)

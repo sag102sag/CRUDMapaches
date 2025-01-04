@@ -14,5 +14,7 @@ data class Mapache(
     @SerialName(value = "jugueteFavorito")
     val jugueteFavorito: String="",
     @SerialName(value = "comidasFavoritas")
-    val comidasFavoritas: List<String> = listOf()
+    val comidasFavoritas: List<String> = listOf(),
+    @SerialName(value = "imagen")
+    val imagen: Int = 0
 )
